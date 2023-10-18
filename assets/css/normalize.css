@@ -8,6 +8,7 @@
   --text-secondary: #383838;
   --text-black: #000;
   --text-white: white;
+  --text-light: #072435;
 }
 
 html,
@@ -69,6 +70,15 @@ p {
   font-weight: 500;
 }
 
+a {
+  text-decoration: none;
+  display: contents;
+  color: inherit;
+}
+
 body {
   background-image: url("../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
