@@ -1,0 +1,25 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+  height: 645px;
+  padding: 50px 46px;
+  width: 271px;
+}
+.sidebar-photo {
+}
+.sidebar-title {
+}
+.sidebar-name {
+}
+.sidebar-text {
+}
+.sidebar__social-links {
+  display: flex;
+  gap: 20px;
+}
+.btn-contact {
+}
