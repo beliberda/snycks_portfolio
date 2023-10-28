@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+}
+.content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: azure;
+}
+.page-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+}
+.page-about__about {
+}
+.page-about__top {
+  max-width: 560px;
+}
+.page-about__list {
+}
+.page-about__card-about {
+}
+.card-abput__icon {
+}
+.card-about__bottom {
+}
+.page-about__qualification {
+}
