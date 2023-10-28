@@ -8,6 +8,8 @@
   height: 645px;
   padding: 50px 46px;
   width: 271px;
+  height: 100%;
+  border-right: 1px solid #6d8093;
 }
 .sidebar-photo {
 }
