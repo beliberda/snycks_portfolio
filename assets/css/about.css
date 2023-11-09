@@ -91,3 +91,10 @@
   gap: 5px;
   align-items: flex-end;
 }
+
+.--qualification-active h4 {
+  color: var(--text-primary);
+}
+.--qualification-active path {
+  fill: var(--text-primary);
+}
