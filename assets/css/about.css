@@ -5,12 +5,12 @@
 .content {
   flex-grow: 1;
   flex-shrink: 1;
+  padding: 50px;
 }
 .page-about {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px;
 }
 .page-about__about {
   display: flex;

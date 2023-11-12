@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Card</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <style></style>
+  <body>
+    <header class="header">
+      <h1 style="font-size: 40px">Anton Developer</h1>
+      <div class="navbar">
+        <nav class="navigation">
+          <a href="./index.html"><h4>ABOUT</h4></a>
+          <a href="./portolio.html"><h4>PORTFOLIO</h4></a>
+          <a href="./skills.html"><h4>SKILLS</h4></a>
+          <a href="./services.html"><h4>SERVICES</h4></a>
+        </nav>
+        <div class="navbar__light-mode">
+          <input type="checkbox" id="light" />
+          <label for="light" class="light">
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <aside class="sidebar">
+        <img
+          class="sidebar-photo"
+          src="./assets/images/icons/user-default.svg"
+          alt=""
+        />
+        <div class="sidebar-title">
+          <h3 class="sidebar-name">Medoded</h3>
+          <h4>Frontend developer</h4>
+        </div>
+        <p class="sidebar-text">
+          High level experience in web design and development knowledge.
+        </p>
+        <div class="sidebar__social-links">
+          <a href="">
+            <img src="./assets/images/icons/instagram.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="./assets/images/icons/github.svg" alt="" />
+          </a>
+          <a href="">
+            <img src="./assets/images/icons/facebook.svg" alt="" />
+          </a>
+        </div>
+        <button class="btn-contact">Contact me</button>
+      </aside>
+      <main class="content page-skills">
+        <div class="page-skills__titles">
+          <h2>Skills</h2>
+          <h5>My technical level</h5>
+        </div>
+        <div class="page-skills__exp">
+          <h4>frontend Developer</h4>
+          <h5>More than 4 years</h5>
+        </div>
+        <div class="gape-skills__skills-list">
+          <article class="skill-item">
+            <img
+              class="skill-item__image"
+              src="./assets/images/icons/skill-html.svg"
+              alt=""
+            />
+            <div class="skill-item__top">
+              <h4>HTML</h4>
+              <h4 class="skill-item__level">0%</h4>
+            </div>
+            <div class="skill-item__level-picture">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="170"
+                height="36"
+                viewBox="0 0 170 36"
+                fill="none"
+              >
+                <path
+                  d="M0 5.62368C53 24.5 106.5 -13.5 170 5.62368V36H0V5.62368Z"
+                  fill="#F4B76E"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="170"
+                height="31"
+                viewBox="0 0 170 31"
+                fill="none"
+              >
+                <path
+                  d="M0 10.7457C57.5 -18 86.5 21.5 170 10.7457V31H0V10.7457Z"
+                  fill="#CC985B"
+                />
+              </svg>
+            </div>
+          </article>
+        </div>
+      </main>
+    </main>
+  </body>
+  <script src="./assets/js/index.js"></script>
+</html>
