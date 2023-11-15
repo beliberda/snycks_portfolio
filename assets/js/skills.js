@@ -1,25 +1,53 @@
 let skillsMass = [
   {
     title: "HTML",
-    img: "./assets/images/icons/skill-html.svg",
+    img: "./assets/images/skills/html.svg",
     lvl: 80,
-    color1: "#F4B76E",
-    color2: "#CC985B",
+    colorFront: "#F4B76E",
+    colorBack: "#CC985B",
   },
   {
     title: "CSS",
-    img: "./assets/images/icons/skill-html.svg",
+    img: "./assets/images/skills/css.svg",
     lvl: 70,
-    color1: "#84B1DB",
-    color2: "#CDE7FF",
+    colorFront: "#84B1DB",
+    colorBack: "#CDE7FF",
   },
   {
     title: "JS",
-    img: "./assets/images/icons/skill-html.svg",
+    img: "./assets/images/skills/js.svg",
     lvl: 40,
-    color1: "#FFFCB6",
-    color2: "#EDE98B",
+    colorFront: "#FFFCB6",
+    colorBack: "#EDE98B",
   },
+  {
+    title: "ReactJS",
+    img: "./assets/images/skills/react.svg",
+    lvl: 40,
+    colorFront: "#A9EBE7",
+    colorBack: "#87D9D4",
+  },
+  {
+    title: "VueJS",
+    img: "./assets/images/skills/vue.svg",
+    lvl: 30,
+    colorFront: "#64e6a9",
+    colorBack: "#435466",
+  },
+  {
+    title: "Ionic",
+    img: "./assets/images/skills/ionic.webp",
+    lvl: 15,
+    colorFront: "#8ab7ff",
+    colorBack: "#438effb3",
+  },
+  {
+    title: "Figma",
+    img: "./assets/images/skills/figma.svg",
+    lvl: 30,
+    colorFront: "#FAB8B8",
+    colorBack: "#DE9191",
+  }
 ];
 
 let skillsList = document.querySelector(".gape-skills__skills-list");
@@ -46,10 +74,9 @@ skillsMass.forEach((skill) => {
                 fill="none"
               >
                 <path
-                  d="M0 5.62368C53 24.5 106.5 -13.5 170 5.62368V ${
-                    skill.lvl * 2
-                  }H 0V 5.62368Z"
-                  fill="${skill.color2}"
+                  d="M0 5.62368C53 24.5 106.5 -13.5 170 5.62368V ${skill.lvl * 2
+    }H 0V 5.62368Z"
+                  fill="${skill.colorBack}"
                 />
               </svg>
               <svg
@@ -60,10 +87,9 @@ skillsMass.forEach((skill) => {
                 fill="none"
               >
                 <path
-                  d="M0 20.7457C57.5 -18 86.5 21.5 170 10V ${
-                    skill.lvl * 2
-                  }H 0V1 0Z"
-                  fill="${skill.color1}"
+                  d="M0 20.7457C57.5 -18 86.5 21.5 170 10V ${skill.lvl * 2
+    }H 0V1 0Z"
+                  fill="${skill.colorFront}"
                 />
               </svg>
             </div>

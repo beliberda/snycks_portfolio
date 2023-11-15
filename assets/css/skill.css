@@ -33,6 +33,9 @@
 .skill-item__image {
   position: relative;
   z-index: 2;
+  margin-left: 10px;
+  width: 30px;
+  color: #8ab7ff;
 }
 .skill-item__top {
   display: flex;
@@ -41,6 +44,7 @@
   width: 100%;
   position: relative;
   z-index: 2;
+  padding: 0 10px;
 }
 
 .skill-item__level-picture {
