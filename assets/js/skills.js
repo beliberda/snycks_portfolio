@@ -37,20 +37,28 @@ let skillsMass = [
   {
     title: "Ionic",
     img: "./assets/images/skills/ionic.webp",
-    lvl: 15,
+    lvl: 10,
     colorFront: "#8ab7ff",
     colorBack: "#438effb3",
   },
   {
     title: "Figma",
     img: "./assets/images/skills/figma.svg",
-    lvl: 30,
+    lvl: 19,
     colorFront: "#FAB8B8",
     colorBack: "#DE9191",
-  }
+  },
 ];
 
 let skillsList = document.querySelector(".gape-skills__skills-list");
+
+skillsMass[0].lvl < 20 ? console.log("меньше") : console.log("больше");
+
+if (skillsMass[0].lvl < 20) {
+  console.log("меньше");
+} else {
+  console.log("больше");
+}
 
 skillsMass.forEach((skill) => {
   skillsList.insertAdjacentHTML(
@@ -63,7 +71,9 @@ skillsMass.forEach((skill) => {
             />
             <div class="skill-item__top">
               <h4>${skill.title}</h4>
-              <h4 class="skill-item__level">${skill.lvl}%</h4>
+              <h4 class="skill-item__level">${
+                skill.lvl < 20 ? "нуб" : "сайбот"
+              }%</h4>
             </div>
             <div class="skill-item__level-picture">
               <svg
@@ -74,8 +84,9 @@ skillsMass.forEach((skill) => {
                 fill="none"
               >
                 <path
-                  d="M0 5.62368C53 24.5 106.5 -13.5 170 5.62368V ${skill.lvl * 2
-    }H 0V 5.62368Z"
+                  d="M0 5.62368C53 24.5 106.5 -13.5 170 5.62368V ${
+                    skill.lvl * 2
+                  }H 0V 5.62368Z"
                   fill="${skill.colorBack}"
                 />
               </svg>
@@ -87,8 +98,9 @@ skillsMass.forEach((skill) => {
                 fill="none"
               >
                 <path
-                  d="M0 20.7457C57.5 -18 86.5 21.5 170 10V ${skill.lvl * 2
-    }H 0V1 0Z"
+                  d="M0 20.7457C57.5 -18 86.5 21.5 170 10V ${
+                    skill.lvl * 2
+                  }H 0V1 0Z"
                   fill="${skill.colorFront}"
                 />
               </svg>
