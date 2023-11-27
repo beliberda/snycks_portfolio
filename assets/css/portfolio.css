@@ -76,3 +76,13 @@
 .radio-slide input:checked + span {
   background-color: var(--text-primary);
 }
+
+/* .page-portfolio {
+  position: relative;
+} */
+#animation {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  left: 0;
+}

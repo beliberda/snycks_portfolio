@@ -72,6 +72,7 @@ function DrawSlide(current) {
 DrawSlide(current);
 
 left.onclick = () => {
+
   current--;
   if (current == -1) {
     current = massSlides.length - 1;
@@ -79,9 +80,36 @@ left.onclick = () => {
   DrawSlide(current);
 };
 right.onclick = () => {
+
   current++;
   if (current == massSlides.length) {
     current = 0;
   }
   DrawSlide(current);
 };
+
+
+
+let picture = document.getElementById("animation")
+
+picture.onclick = () => {
+
+  let start = Date.now();
+
+  function Anim(timePassed) {
+    picture.style.left = timePassed / 5 + "px"
+  }
+  const animationInterval = setInterval(() => {
+    let timePassed = Date.now() - start
+    console.log("Прошло времени", timePassed);
+    if (timePassed >= 5000) {
+      clearInterval(animationInterval)
+      return
+    }
+    Anim(timePassed)
+
+
+  }, 10);
+}
+
+
