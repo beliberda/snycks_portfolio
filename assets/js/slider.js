@@ -50,7 +50,10 @@ pagination.forEach((radio, i) => {
 });
 
 function DrawSlide(current) {
-  slider.innerHTML = `<div class="slider-slide">
+  slider.lastElementChild.classList.remove("--new-slide")
+  slider.lastElementChild.classList.add("--old-slide")
+
+  slider.insertAdjacentHTML("afterbegin", `<div class="slider-slide --new-slide">
 
             <img
               src="${massSlides[current].url}"
@@ -65,7 +68,15 @@ function DrawSlide(current) {
               <button class="btn-demo"><a target="_blank" href="${massSlides[current].link}">Demo</a></button>
             </main>
             
-          </div>`;
+          </div>`)
+  setTimeout(() => {
+    slider.firstElementChild.style.left = "0px"
+  }, 300);
+
+  setTimeout(() => {
+    slider.lastElementChild.remove()
+    slider.firstElementChild.classList.remove("--new-slide")
+  }, 2000);
   pagination[current].firstElementChild.checked = true;
 }
 
@@ -113,3 +124,7 @@ picture.onclick = () => {
 }
 
 
+// 1. Создаем новый слайд левее с полурозрачностью
+// 2. двигаем слайд вправо и делаем непрозрачным постепенно
+// 3. Во время движения нового слайда делаем прозрачным старый
+// 4. Удаляем старый слайд
