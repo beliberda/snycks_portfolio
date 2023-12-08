@@ -42,18 +42,27 @@ for (let i = 0; i < massSlides.length; i++) {
 }
 pagination = document.querySelectorAll(".radio-slide");
 let current = 0;
+isAnim = false;
+
 pagination.forEach((radio, i) => {
   radio.onclick = function () {
+    if (isAnim) {
+      return;
+    }
     current = i;
     DrawSlide(i);
   };
 });
 
 function DrawSlide(current) {
-  slider.lastElementChild.classList.remove("--new-slide")
-  slider.lastElementChild.classList.add("--old-slide")
+  isAnim = true;
 
-  slider.insertAdjacentHTML("afterbegin", `<div class="slider-slide --new-slide">
+  slider.lastElementChild.classList.remove("--new-slide");
+  slider.lastElementChild.classList.add("--old-slide");
+
+  slider.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="slider-slide --new-slide">
 
             <img
               src="${massSlides[current].url}"
@@ -68,22 +77,26 @@ function DrawSlide(current) {
               <button class="btn-demo"><a target="_blank" href="${massSlides[current].link}">Demo</a></button>
             </main>
             
-          </div>`)
+          </div>`
+  );
   setTimeout(() => {
-    slider.firstElementChild.style.left = "0px"
-  }, 300);
+    slider.firstElementChild.style.left = "0px";
+  }, 400);
 
   setTimeout(() => {
-    slider.lastElementChild.remove()
-    slider.firstElementChild.classList.remove("--new-slide")
-  }, 2000);
+    slider.lastElementChild.remove();
+    slider.firstElementChild.classList.remove("--new-slide");
+    isAnim = false;
+  }, 1500);
   pagination[current].firstElementChild.checked = true;
 }
 
 DrawSlide(current);
 
 left.onclick = () => {
-
+  if (isAnim) {
+    return;
+  }
   current--;
   if (current == -1) {
     current = massSlides.length - 1;
@@ -91,7 +104,9 @@ left.onclick = () => {
   DrawSlide(current);
 };
 right.onclick = () => {
-
+  if (isAnim) {
+    return;
+  }
   current++;
   if (current == massSlides.length) {
     current = 0;
@@ -99,32 +114,46 @@ right.onclick = () => {
   DrawSlide(current);
 };
 
+// let picture = document.getElementById("animation");
 
+// picture.onclick = () => {
+//   let start = Date.now();
 
-let picture = document.getElementById("animation")
-
-picture.onclick = () => {
-
-  let start = Date.now();
-
-  function Anim(timePassed) {
-    picture.style.left = timePassed / 5 + "px"
-  }
-  const animationInterval = setInterval(() => {
-    let timePassed = Date.now() - start
-    console.log("Прошло времени", timePassed);
-    if (timePassed >= 5000) {
-      clearInterval(animationInterval)
-      return
-    }
-    Anim(timePassed)
-
-
-  }, 10);
-}
-
+//   function Anim(timePassed) {
+//     picture.style.left = timePassed / 5 + "px";
+//   }
+//   const animationInterval = setInterval(() => {
+//     let timePassed = Date.now() - start;
+//     console.log("Прошло времени", timePassed);
+//     if (timePassed >= 5000) {
+//       clearInterval(animationInterval);
+//       return;
+//     }
+//     Anim(timePassed);
+//   }, 10);
+// };
 
 // 1. Создаем новый слайд левее с полурозрачностью
 // 2. двигаем слайд вправо и делаем непрозрачным постепенно
 // 3. Во время движения нового слайда делаем прозрачным старый
 // 4. Удаляем старый слайд
+
+let textBlock = document.getElementById("text");
+
+const text =
+  "1. Создаем новый слайд левее с полурозрачностью 2. двигаем слайд вправо и делаем непрозрачным постепенно 3. Во время движения нового слайда делаем прозрачным старый 4. Удаляем старый слайд";
+
+function Random(min, max) {
+  return Math.floor(Math.random() * max) - min;
+}
+
+let i = 0;
+let random = Random(200, 500);
+const textInterval = setInterval(() => {
+  textBlock.insertAdjacentText("beforeend", text[i]);
+  i++;
+  if (i === text.length) {
+    clearInterval(textInterval);
+  }
+  random = Random(200, 500);
+}, random);

@@ -23,14 +23,50 @@ button {
 }
 
 .btn-contact {
-  /* background: linear-gradient(105deg, #5671a6 11.88%, #5671a6 11.88%); */
   background: linear-gradient(105deg, #5671a6 11.88%, #b3cbd9 80.84%);
-  background-position: 0 0;
-  background-size: cover;
   border: none;
   transition: 1s;
 }
+
 .btn-contact:hover {
-  /* background: linear-gradient(105deg, #5671a6 11.88%, #b3cbd9 80.84%); */
-  background-position: 100px 50px;
+  background: linear-gradient(105deg, #5671a6 11.88%, #b3cbd9 80.84%);
+  background-size: 400% 400%;
+
+  -webkit-animation: ButtonGradient 1s ease normal;
+  -moz-animation: ButtonGradient 1s ease normal;
+  animation: ButtonGradient 1s ease normal;
+}
+
+@-webkit-keyframes ButtonGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes ButtonGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes ButtonGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

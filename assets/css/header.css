@@ -37,8 +37,8 @@
   background-size: 100% 2px;
 }
 .navbar__light-mode {
-  width: 54px;
-  height: 21.5px;
+  width: 50px;
+  height: 24px;
   border-radius: 14px;
   border: 2px solid var(--text-primary);
   cursor: pointer;
@@ -56,7 +56,7 @@
 .light span {
   cursor: pointer;
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 1px;
   display: block;
   width: 15px;
@@ -67,5 +67,5 @@
   transition-timing-function: ease-in-out;
 }
 #light:checked ~ .light span {
-  transform: translateX(22px);
+  transform: translateX(29px);
 }
