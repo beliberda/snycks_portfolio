@@ -138,22 +138,22 @@ right.onclick = () => {
 // 3. Во время движения нового слайда делаем прозрачным старый
 // 4. Удаляем старый слайд
 
-let textBlock = document.getElementById("text");
+// let textBlock = document.getElementById("text");
 
-const text =
-  "1. Создаем новый слайд левее с полурозрачностью 2. двигаем слайд вправо и делаем непрозрачным постепенно 3. Во время движения нового слайда делаем прозрачным старый 4. Удаляем старый слайд";
+// const text =
+//   "1. Создаем новый слайд левее с полурозрачностью 2. двигаем слайд вправо и делаем непрозрачным постепенно 3. Во время движения нового слайда делаем прозрачным старый 4. Удаляем старый слайд";
 
-function Random(min, max) {
-  return Math.floor(Math.random() * max) - min;
-}
+// function Random(min, max) {
+//   return Math.floor(Math.random() * max) - min;
+// }
 
-let i = 0;
-let random = Random(200, 500);
-const textInterval = setInterval(() => {
-  textBlock.insertAdjacentText("beforeend", text[i]);
-  i++;
-  if (i === text.length) {
-    clearInterval(textInterval);
-  }
-  random = Random(200, 500);
-}, random);
+// let i = 0;
+// let random = Random(200, 500);
+// const textInterval = setInterval(() => {
+//   textBlock.insertAdjacentText("beforeend", text[i]);
+//   i++;
+//   if (i === text.length) {
+//     clearInterval(textInterval);
+//   }
+//   random = Random(200, 500);
+// }, random);

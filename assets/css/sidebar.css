@@ -1,7 +1,6 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 40px;
   align-items: center;
   text-align: center;
@@ -11,17 +10,18 @@
   height: 100%;
   border-right: 1px solid #6d8093;
 }
-.sidebar-photo {
-}
-.sidebar-title {
-}
-.sidebar-name {
-}
-.sidebar-text {
-}
+
+.sidebar-photo {}
+
+.sidebar-title {}
+
+.sidebar-name {}
+
+.sidebar-text {}
+
 .sidebar__social-links {
   display: flex;
   gap: 20px;
 }
-.btn-contact {
-}
+
+.btn-contact {}
